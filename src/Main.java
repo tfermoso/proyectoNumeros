@@ -23,7 +23,7 @@ public class Main {
         do{
             System.out.println(menu);
             menuSeleccionado=leer.nextInt();
-
+    
 
 
         }while(menuSeleccionado!=10);
