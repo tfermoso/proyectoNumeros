@@ -1,4 +1,6 @@
+import com.formacom.INumeros;
 import com.formacom.Numeros;
+import com.formacom.Numeros2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,17 +13,20 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         Scanner leer=new Scanner(System.in);
-        List<Integer> numeros=new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Introduce un número");
-            numeros.add(leer.nextInt());
-        }
-        Numeros listaNumeros=new Numeros(numeros);
+        int menuSeleccionado;
+        String menu= """
+                1. Nuevo alumno
+                2. Consultar notas.
+                ...
+                10. Salir
+                """;
+        do{
+            System.out.println(menu);
+            menuSeleccionado=leer.nextInt();
 
-        System.out.println("El menor es: "+listaNumeros.menor());
-        System.out.println("Numeros pares");
-        System.out.println(listaNumeros.pares());
 
+
+        }while(menuSeleccionado!=10);
 
 
     }
